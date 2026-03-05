@@ -44,15 +44,15 @@ export default function Home() {
           onClick={() => playGame("rock")}
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
-          <img src="/rock.png" width={80} />
-          <p className="text-black mt-2">Rock</p>
+         <img src=" https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2pvYjk1OS1lbGVtZW50LWItMDEzNl8yLmpwZw.jpg" width={80}/>
+         <p className="text-black mt-2">Rock</p>
         </button>
 
         <button
           onClick={() => playGame("paper")}
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
-          <img src="/paper.png" width={80} />
+          <img src="https://thumb.silhouette-ac.com/t/26/2654adfd65b6ca4a8ac25a9f727d2262_t.jpeg" width={80} />
           <p className="text-black mt-2">Paper</p>
         </button>
 
@@ -60,7 +60,7 @@ export default function Home() {
           onClick={() => playGame("scissors")}
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
-          <img src="/scissors.png" width={80} />
+          <img src="https://thumb.silhouette-ac.com/t/a7/a7c3020b4cfb4fd154c4fcfd62702df2_t.jpeg" width={80} />
           <p className="text-black mt-2">Scissors</p>
         </button>
 
