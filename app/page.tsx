@@ -9,7 +9,7 @@ export default function Home() {
   const [computerChoice, setComputerChoice] = useState("");
   const [result, setResult] = useState("");
 
-  const playGame = (choice) => {
+  const playGame = (choice: string) => {
     const randomChoice = choices[Math.floor(Math.random() * choices.length)];
 
     setPlayerChoice(choice);
