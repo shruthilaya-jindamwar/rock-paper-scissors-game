@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const choices = ["rock", "paper", "scissors"];
@@ -10,8 +11,7 @@ export default function Home() {
   const [result, setResult] = useState("");
 
   const playGame = (choice: string) => {
-    const randomChoice =
-      choices[Math.floor(Math.random() * choices.length)];
+    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
 
     setPlayerChoice(choice);
     setComputerChoice(randomChoice);
@@ -31,28 +31,32 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900 text-white">
-
-      <h1 className="text-4xl font-bold mb-10">
-        Rock Paper Scissors
-      </h1>
+      <h1 className="text-4xl font-bold mb-10">Rock Paper Scissors</h1>
 
       {/* Choice Buttons */}
 
       <div className="flex gap-10">
-
         <button
           onClick={() => playGame("rock")}
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
-         <img src=" https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2pvYjk1OS1lbGVtZW50LWItMDEzNl8yLmpwZw.jpg" width={80}/>
-         <p className="text-black mt-2">Rock</p>
+          <Image
+            src=" https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2pvYjk1OS1lbGVtZW50LWItMDEzNl8yLmpwZw.jpg"
+            width={80}
+            alt=""
+          />
+          <p className="text-black mt-2">Rock</p>
         </button>
 
         <button
           onClick={() => playGame("paper")}
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
-          <img src="https://thumb.silhouette-ac.com/t/26/2654adfd65b6ca4a8ac25a9f727d2262_t.jpeg" width={80} />
+          <Image
+            src="https://thumb.silhouette-ac.com/t/26/2654adfd65b6ca4a8ac25a9f727d2262_t.jpeg"
+            width={80}
+            alt=""
+          />
           <p className="text-black mt-2">Paper</p>
         </button>
 
@@ -60,16 +64,18 @@ export default function Home() {
           onClick={() => playGame("scissors")}
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
-          <img src="https://thumb.silhouette-ac.com/t/a7/a7c3020b4cfb4fd154c4fcfd62702df2_t.jpeg" width={80} />
+          <Image
+            src="https://thumb.silhouette-ac.com/t/a7/a7c3020b4cfb4fd154c4fcfd62702df2_t.jpeg"
+            width={80}
+            alt=""
+          />
           <p className="text-black mt-2">Scissors</p>
         </button>
-
       </div>
 
       {/* Results */}
 
       <div className="mt-10 text-center">
-
         <p className="text-lg">
           Player: <span className="font-bold">{playerChoice}</span>
         </p>
@@ -78,13 +84,8 @@ export default function Home() {
           Computer: <span className="font-bold">{computerChoice}</span>
         </p>
 
-        <h2 className="text-3xl mt-4 font-bold text-yellow-400">
-          {result}
-        </h2>
-
+        <h2 className="text-3xl mt-4 font-bold text-yellow-400">{result}</h2>
       </div>
     </div>
   );
 }
-
-      
