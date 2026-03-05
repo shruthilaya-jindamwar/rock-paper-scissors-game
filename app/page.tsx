@@ -3,42 +3,88 @@
 import { useState } from "react";
 
 export default function Home() {
-  const choices = ["Rock", "Paper", "Scissors"];
+  const choices = ["rock", "paper", "scissors"];
 
   const [playerChoice, setPlayerChoice] = useState("");
   const [computerChoice, setComputerChoice] = useState("");
   const [result, setResult] = useState("");
 
   const playGame = (choice: string) => {
-    const randomChoice = choices[Math.floor(Math.random() * choices.length)];
+    const randomChoice =
+      choices[Math.floor(Math.random() * choices.length)];
 
     setPlayerChoice(choice);
     setComputerChoice(randomChoice);
 
     if (choice === randomChoice) {
-      setResult("Draw");
+      setResult("Draw 🤝");
     } else if (
-      (choice === "Rock" && randomChoice === "Scissors") ||
-      (choice === "Paper" && randomChoice === "Rock") ||
-      (choice === "Scissors" && randomChoice === "Paper")
+      (choice === "rock" && randomChoice === "scissors") ||
+      (choice === "paper" && randomChoice === "rock") ||
+      (choice === "scissors" && randomChoice === "paper")
     ) {
-      setResult("You Win");
+      setResult("You Win 🎉");
     } else {
-      setResult("Computer Wins");
+      setResult("Computer Wins 🤖");
     }
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>Rock Paper Scissors</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900 text-white">
 
-      <button onClick={() => playGame("Rock")}>Rock</button>
-      <button onClick={() => playGame("Paper")}>Paper</button>
-      <button onClick={() => playGame("Scissors")}>Scissors</button>
+      <h1 className="text-4xl font-bold mb-10">
+        Rock Paper Scissors
+      </h1>
 
-      <h3>Player: {playerChoice}</h3>
-      <h3>Computer: {computerChoice}</h3>
-      <h2>{result}</h2>
+      {/* Choice Buttons */}
+
+      <div className="flex gap-10">
+
+        <button
+          onClick={() => playGame("rock")}
+          className="bg-white p-5 rounded-xl hover:scale-110 transition"
+        >
+          <img src="/rock.png" width={80} />
+          <p className="text-black mt-2">Rock</p>
+        </button>
+
+        <button
+          onClick={() => playGame("paper")}
+          className="bg-white p-5 rounded-xl hover:scale-110 transition"
+        >
+          <img src="/paper.png" width={80} />
+          <p className="text-black mt-2">Paper</p>
+        </button>
+
+        <button
+          onClick={() => playGame("scissors")}
+          className="bg-white p-5 rounded-xl hover:scale-110 transition"
+        >
+          <img src="/scissors.png" width={80} />
+          <p className="text-black mt-2">Scissors</p>
+        </button>
+
+      </div>
+
+      {/* Results */}
+
+      <div className="mt-10 text-center">
+
+        <p className="text-lg">
+          Player: <span className="font-bold">{playerChoice}</span>
+        </p>
+
+        <p className="text-lg">
+          Computer: <span className="font-bold">{computerChoice}</span>
+        </p>
+
+        <h2 className="text-3xl mt-4 font-bold text-yellow-400">
+          {result}
+        </h2>
+
+      </div>
     </div>
   );
 }
+
+      
