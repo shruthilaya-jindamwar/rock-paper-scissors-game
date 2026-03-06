@@ -43,7 +43,8 @@ export default function Home() {
           <Image
             src=" https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2pvYjk1OS1lbGVtZW50LWItMDEzNl8yLmpwZw.jpg"
             width={80}
-            alt=""
+            height={80}
+            alt="Rock"
           />
           <p className="text-black mt-2">Rock</p>
         </button>
@@ -55,7 +56,8 @@ export default function Home() {
           <Image
             src="https://thumb.silhouette-ac.com/t/26/2654adfd65b6ca4a8ac25a9f727d2262_t.jpeg"
             width={80}
-            alt=""
+            height={80}
+            alt="Paper"
           />
           <p className="text-black mt-2">Paper</p>
         </button>
@@ -67,7 +69,8 @@ export default function Home() {
           <Image
             src="https://thumb.silhouette-ac.com/t/a7/a7c3020b4cfb4fd154c4fcfd62702df2_t.jpeg"
             width={80}
-            alt=""
+            height={80}
+            alt="Scissors"
           />
           <p className="text-black mt-2">Scissors</p>
         </button>
