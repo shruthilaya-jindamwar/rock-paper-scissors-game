@@ -41,7 +41,7 @@ export default function Home() {
           className="bg-white p-5 rounded-xl hover:scale-110 transition"
         >
           <Image
-            src=" https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2pvYjk1OS1lbGVtZW50LWItMDEzNl8yLmpwZw.jpg"
+            src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTEyL2pvYjk1OS1lbGVtZW50LWItMDEzNl8yLmpwZw.jpg"
             width={80}
             height={80}
             alt="Rock"
