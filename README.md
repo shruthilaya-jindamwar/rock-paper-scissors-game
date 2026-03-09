@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+The app implements a simple **Rock Paper Scissors** game. You can choose whether you or the computer plays first, then pick your move; the computer will either pick at the same time or immediately if it goes first. The result is displayed and you can play again.
+
 ## Getting Started
 
 First, run the development server:
